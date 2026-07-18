@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #2D5A4A;
+  --color-accent: #c9e20e;
+  --color-text-light: beige;
+  --font-main: 'Quicksand', sans-serif;
+
+  --text-h1: 60px;
+  --text-h3: 25px;
+  --text-body: 22px;
+  --text-button: 18px;
+}
