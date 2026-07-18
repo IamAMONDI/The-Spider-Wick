@@ -8,19 +8,13 @@ body {
   margin: 0;
 }
 
+/* Header: start from here */
 .heroo{
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-
-
-.hero{
-    background-color: var(--color-accent);
-    width: 100%;
-    min-height: 600px;
-}
 
 .header{
     display: flex;
@@ -31,6 +25,24 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+}
+.link{
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 30px;
+    font-family: var(--font-main);
+}
+
+.link:hover {
+    opacity: 0.8;
+}
+
+/* to here */
+
+.hero{
+    background-color: var(--color-accent);
+    width: 100%;
+    min-height: 600px;
 }
 
 .header h1 {
@@ -44,16 +56,9 @@ body {
     gap: 20px;
 }
 
-.link{
-    text-decoration: none;
-    color: var(--color-text-light);
-    font-size: 30px;
-    font-family: var(--font-main);
-}
 
-.link:hover {
-    opacity: 0.8;
-}
+
+
 
 .hero-b{
     display: flex;
@@ -210,7 +215,7 @@ button {
   margin-bottom: 10px;
 }
 
-/* ---- Footer ---- */
+/* ---- Footer start from here ---- */
 
 .site-footer {
   background-color: var(--color-primary);
@@ -285,3 +290,5 @@ button {
   font-size: 14px;
   opacity: 0.7;
 }
+
+/* to here */
