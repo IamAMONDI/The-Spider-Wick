@@ -102,12 +102,16 @@ section ul{
     
 .value-container{
   display: flex;
+  flex-direction: column;
   gap: 40px;
+  
+  width: 100%;
+  overflow: hidden; 
+  padding: 40px 0;
 }
 
 .core-values{
   display: flex;
-  flex-direction: column;
   gap: 40px;
 
 
@@ -117,18 +121,19 @@ section ul{
     display: flex;
     flex-direction: column;
     text-align: center;      
-    gap: 30px;
+    gap: 5px;
     width: 600px;
-    height: 600px;
+    min-height: 600px;
     border: 2px solid var(--color-text-light);
     border-radius: 45%;
     background-color: var(--color-accent);
-    overflow: hidden;     
+    overflow: hidden; 
+    animation: slide 12s ease-in-out infinite alternate;   
 }
 
-.values p{
-    max-width: 380px;     
-    margin: 0 auto;
+@keyframes slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100px); }
 }
 
 .values img{
@@ -136,6 +141,14 @@ section ul{
     height: 50%;           
     object-fit: cover;     
 }
+.values p{
+  max-width: 380px;   
+  margin: 0 auto;
+}
+
+
+
+
 
 
 
