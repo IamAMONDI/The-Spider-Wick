@@ -37,6 +37,20 @@ body {
     opacity: 0.8;
 }
 
+.header h1 {
+    color: var(--color-text-light);
+    transform: none;
+    font-size: var(--text-h1);
+    font-family: var(--font-main);
+}
+
+.header-1{
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+    
+}
+
 /* to here */
 
 .hero{
@@ -45,16 +59,7 @@ body {
     min-height: 600px;
 }
 
-.header h1 {
-    color: var(--color-text-light);
-    transform: none;
-}
 
-.header-1{
-    display: flex;
-    padding-top: 20px;
-    gap: 20px;
-}
 
 
 
