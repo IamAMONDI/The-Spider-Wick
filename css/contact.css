@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+/* Header: copied from mission.css so contact page matches */
+.heroo{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.link{
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 30px;
+    font-family: var(--font-main);
+}
+.link:hover {
+    opacity: 0.8;
+}
+.header h1 {
+    color: var(--color-text-light);
+    transform: none;
+    font-size: var(--text-h1);
+    font-family: var(--font-main);
+}
+.header-1{
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+}
+
+/* Footer: copied from mission.css so contact page matches */
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 60px 96px 20px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-brand h2,
+.footer-links
