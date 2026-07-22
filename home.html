@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menatl Health</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link
       rel="stylesheet"
       type="text/css"
@@ -15,21 +16,62 @@
 </head>
 <body>
      <!-- star from here -->
-    <header class="heroo">
-       
-        <div class="header">
-           <h1>Mindwell</h1>
-           <nav class="header-1">
-            <a href="home.html" class="link">Home</a>
-            <a href="about.html" class="link">About</a>
-            <a href="mission.html" class="link">Mission and impact</a>
-            <a href="gallery.html" class="link">Galley</a>
-            <a href="contact.html" class="link">Contact us</a>
-            
+   
+<header class="heroo">
 
-           </nav>
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid header">
+
+            <a class="navbar-brand" href="home.html">
+                Spiders
+            </a>
+
+            <button 
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <div class="navbar-nav ms-auto header-1">
+
+                    <a class="nav-link link" href="home.html">Home</a>
+
+                    <a class="nav-link link" href="about.html">About</a>
+
+                    <a class="nav-link link" href="mission.html">
+                        Mission 
+                    </a>
+
+                    <a class="nav-link link" href="gallery.html">
+                        Gallery
+                    </a>
+
+                    <a class="nav-link link" href="contact.html">
+                        Contact Us
+                    </a>
+
+
+                   <button id="themeToggle" class="btn btn-outline-light ms-3">
+                     <i class="ph ph-moon"></i>
+                   </button>
+                </div>
+
+            </div>
+
         </div>
-    </header>
+
+    </nav>
+
+</header>
+
         <!-- to here this is what my team ment should have in their files as their header -->
     <section class="hero">
         <div class="hero-b">
@@ -81,47 +123,183 @@
 
     <!-- star from here -->
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h2>Spiders</h2>
-                <p>Empowering care, one home at a time.</p>
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <!-- Brand -->
+
+            <div class="col-md-4">
+
+                <h2 class="fw-bold">
+                    S.P.I.D.E.R.S
+                </h2>
+
+                <p>
+                   Supporting People In Developing Emotional Resilience and Strength
+                </p>
+
             </div>
 
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="home.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="mission.html" class="footer-link">Mission and Impact</a>
-                <a href="contact.html" class="footer-link">Contact Us</a>
-            </div>
 
-            <div class="footer-contact">
-                <h4>Get in Touch</h4>
-                <div>
-                    <div>
-                        <i class="ph ph-envelope-open"></i>
-                         <p>hello@spiders.com</p>
-                    </div>
-                    <div>
-                        <i class="ph ph-facebook-logo"></i>
-                         <p>hello@spiders.com</p>
-                    </div>
-                    <div>
-                        <i class="ph ph-instagram-logo"></i>
-                        <p>hello@spiders.com</p>
-                    </div>
-                    <div>
-                        <i class="ph ph-whatsapp-logo"></i>
-                         <p>+230 000 0000</p>
-                    </div>
+
+            <!-- Links -->
+
+            <div class="col-md-4">
+
+                <h4 class="fw-bold">
+                    Quick Links
+                </h4>
+
+                <div class="d-flex flex-column gap-2">
+
+                    <a href="home.html" class="footer-link">
+                        Home
+                    </a>
+
+                    <a href="about.html" class="footer-link">
+                        About
+                    </a>
+
+                    <a href="mission.html" class="footer-link">
+                        Mission
+                    </a>
+
+                    <a href="contact.html" class="footer-link">
+                        Contact Us
+                    </a>
+
                 </div>
+
             </div>
+
+
+
+
+            <!-- Contact -->
+
+            <div class="col-md-4">
+
+                <h4 class="fw-bold">
+                    Get in Touch
+                </h4>
+
+
+                <div class="d-flex flex-column gap-3">
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="ph ph-envelope-open"></i>
+
+                        <p class="mb-0">
+                            hello@spiders.com
+                        </p>
+
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="ph ph-facebook-logo"></i>
+
+                        <p class="mb-0">
+                            hello@spiders.com
+                        </p>
+
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="ph ph-instagram-logo"></i>
+
+                        <p class="mb-0">
+                            hello@spiders.com
+                        </p>
+
+                    </div>
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="ph ph-whatsapp-logo"></i>
+
+                        <p class="mb-0">
+                            +230 000 0000
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
         </div>
+
+
+
         <div class="footer-bottom">
-                <p>&copy; 2026 Spiders. All rights reserved.</p>
+
+            <p>
+                &copy; 2026 S.P.I.D.E.R.S. All rights reserved.
+            </p>
+
         </div>
-    </footer>
+
+
+    </div>
+
+</footer>
+
+
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Theme Toggle -->
+
+<script>
+    const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+
+    const body = document.body;
+    const icon = toggle.querySelector("i");
+
+    const theme = body.getAttribute("data-bs-theme");
+
+
+    if (theme === "light") {
+
+        body.setAttribute("data-bs-theme", "dark");
+
+        icon.className = "ph ph-sun";
+
+
+    } else {
+
+        body.setAttribute("data-bs-theme", "light");
+
+        icon.className = "ph ph-moon";
+
+    }
+
+});
+
+</script>
+
+
     <!-- to here, this is what my teamment should have as their footer -->
 
 </body>
