@@ -1,137 +1,152 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us — Mindwell</title>
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+```
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="css/variable.css" rel="stylesheet">
-    <link href="css/contact.css" rel="stylesheet">
+<link href="css/variable.css" rel="stylesheet">
+<link href="css/contact.css" rel="stylesheet">
+```
+
 </head>
 <body>
 
-    <header class="heroo">
-        <div class="header">
-            <h1>Mindwell</h1>
-            <nav class="header-1">
-                <a href="home.html" class="link">Home</a>
-                <a href="about.html" class="link">About</a>
-                <a href="mission.html" class="link">Mission and impact</a>
-                <a href="gallery.html" class="link">Gallery</a>
-                <a href="contact.html" class="link active">Contact us</a>
-            </nav>
-        </div>
-    </header>
+```
+<header class="heroo">
+    <div class="header">
+        <h1>Mindwell</h1>
+        <nav class="header-1">
+            <a href="home.html" class="link">Home</a>
+            <a href="about.html" class="link">About</a>
+            <a href="mission.html" class="link">Mission and impact</a>
+            <a href="gallery.html" class="link">Gallery</a>
+            <a href="contact.html" class="link active" aria-current="page">Contact us</a>
+        </nav>
+    </div>
+</header>
 
-    <div class="contact-split">
-        <div class="contact-photo left"></div>
+<div class="contact-split">
+    <div class="contact-photo left"></div>
 
-        <div class="contact-card">
-            <span class="eyebrow">Get in touch</span>
-            <h1>Reach out</h1>
-            <p class="subline">Connect with our team — every message is kept confidential.</p>
+    <div class="contact-card">
+        <span class="eyebrow">Get in touch</span>
+        <h1>Reach out</h1>
+        <p class="subline">Connect with our team — every message is kept confidential.</p>
 
-            <form id="contact-form" class="underline-form" novalidate>
+        <form
+            action="https://formsubmit.co/ngugijacinta@gmail.com"
+            method="POST"
+            class="underline-form">
 
-                <div class="form-group full">
-                    <label for="fullname">Full Name <span class="req">*</span></label>
-                    <input type="text" id="fullname" name="fullname" required minlength="2" placeholder="Jane Doe">
-                </div>
+            <div class="form-group full">
+                <label for="fullname">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullname" name="fullname" required minlength="2" placeholder="Jane Doe" autocomplete="name">
+            </div>
 
-                <div class="form-group">
-                    <label for="email">Email <span class="req">*</span></label>
-                    <input type="email" id="email" name="email" required
-                           pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
-                           title="Enter a valid email address, e.g. name@example.com"
-                           placeholder="jane@email.com">
-                    <span class="hint">e.g. jane@email.com</span>
-                </div>
+            <div class="form-group">
+                <label for="email">Email <span class="req">*</span></label>
+                <input
+                 type="email"
+                 id="email"
+                 name="email"
+                 required
+                 placeholder="jane@email.com"
+                 autocomplete="email">
+   
+                <span class="hint">e.g. jane@email.com</span>
+            </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone <span class="req">*</span></label>
-                    <input type="tel" id="phone" name="phone"
-                           inputmode="numeric"
-                           maxlength="8"
-                           pattern="^[0-9]{8}$"
-                           title="Must be exactly 8 digits, numbers only"
-                           placeholder="12345678"
-                           required>
-                    <span class="hint">8 digits only, no letters or spaces</span>
-                </div>
+            <div class="form-group">
+                <label for="phone">Phone <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone"
+                       inputmode="numeric"
+                       minlength="8"
+                       maxlength="8"
+                       pattern="^[0-9]{8}$"
+                       title="Must be exactly 8 digits, numbers only"
+                       placeholder="12345678"
+                       autocomplete="tel"
+                       required>
+                <span class="hint">8 digits only, no letters or spaces</span>
+            </div>
 
-                <div class="form-group full">
-                    <label for="reftoken">Reference Token <span class="req">*</span></label>
-                    <input type="text" id="reftoken" name="reftoken"
-                           placeholder="ABC-1234"
-                           pattern="^[A-Z]{3}-\d{4}$"
-                           title="Format: 3 uppercase letters, dash, 4 digits"
-                           required>
-                    <span class="hint">Format: 3 letters, dash, 4 digits</span>
-                </div>
+            <div class="form-group full">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="4" required minlength="10"
+                    placeholder="Tell us a little about what brings you here..."></textarea>
+            </div>
 
-                <div class="form-group full">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="3" required minlength="10" placeholder="Tell us a little about what brings you here..."></textarea>
-                </div>
+            <!-- FormSubmit hidden fields -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Mindwell Contact Form Submission">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="thankyou.html">
 
-                <button type="submit" class="contact">Submit</button>
-            </form>
-        </div>
-
-        <div class="contact-photo right"></div>
+            <button type="submit" class="contact">Submit</button>
+        </form>
     </div>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h2>Spiders</h2>
-                <p>Empowering care, one home at a time.</p>
+    <div class="contact-photo right"></div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2>Mindwell</h2>
+            <p>Empowering care, one conversation at a time.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="home.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="mission.html" class="footer-link">Mission and Impact</a>
+            <a href="gallery.html" class="footer-link">Gallery</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Get in Touch</h4>
+
+            <div>
+                <i class="ph ph-envelope-open"></i>
+                <a href="mailto:ngugijacinta@gmail.com">ngugijacinta@gmail.com</a>
             </div>
 
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="home.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="mission.html" class="footer-link">Mission and Impact</a>
-                <a href="contact.html" class="footer-link">Contact Us</a>
+            <div>
+                <i class="ph ph-facebook-logo"></i>
+                <a href="#">Facebook</a>
             </div>
 
-            <div class="footer-contact">
-                <h4>Get in Touch</h4>
-                <div>
-                    <div>
-                        <i class="ph ph-envelope-open"></i>
-                        <p>hello@spiders.com</p>
-                    </div>
-                    <div>
-                        <i class="ph ph-facebook-logo"></i>
-                        <p>hello@spiders.com</p>
-                    </div>
-                    <div>
-                        <i class="ph ph-instagram-logo"></i>
-                        <p>hello@spiders.com</p>
-                    </div>
-                    <div>
-                        <i class="ph ph-whatsapp-logo"></i>
-                        <p>+230 000 0000</p>
-                    </div>
-                </div>
+            <div>
+                <i class="ph ph-instagram-logo"></i>
+                <a href="#">Instagram</a>
+            </div>
+
+            <div>
+                <i class="ph ph-whatsapp-logo"></i>
+                <a href="https://wa.me/2300000000">+230 000 0000</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Spiders. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 
-    <script src="js/contact.js"></script>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mindwell. All rights reserved.</p>
+    </div>
+</footer>
+```
+
 </body>
 </html>
