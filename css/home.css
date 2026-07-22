@@ -105,6 +105,7 @@ h3 {
 
 .mb-0{
   color: var(--color-text-light);
+  font-size: var(--text-button);
 }
 
 p {
