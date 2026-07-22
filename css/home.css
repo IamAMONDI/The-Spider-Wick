@@ -72,11 +72,16 @@ body {
     justify-content: center;
 }
 
+  p{
+    color: var(--color-text-light);
+
+  }
+
 h1 {
   font-family: var(--font-main);
   font-size: var(--text-h1);
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text-light);
   transform: translateY(-40px);
 }
 
