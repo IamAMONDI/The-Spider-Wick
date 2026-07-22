@@ -100,7 +100,7 @@ h2{
 
 h3 {
   font-family: var(--font-main);
-  color: var(--color-primary);
+  color: var(--color-text-light);
 }
 
 p {
