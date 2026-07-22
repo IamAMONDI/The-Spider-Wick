@@ -1,57 +1,224 @@
+/* =========================
+   BOOTSTRAP THEME SETTINGS
+========================= */
+
+
+/* LIGHT MODE */
+
+[data-bs-theme="light"] {
+
+    --bs-body-bg: beige;
+    --bs-body-color: var(--color-primary);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45, 90, 74;
+
+    --bs-link-color: var(--color-primary);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-primary);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg: white;
+
+}
+
+
+
 * {
-  box-sizing: border-box;
+
+  box-sizing:border-box;
+
 }
 
 body {
+
   margin: 0;
+
+  font-family:var(--font-main);
+
 }
 
-/* Header: start from here */
-.heroo{
+/* =========================
+   HEADER
+========================= */
+
+
+.heroo {
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
 }
 
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: var(--color-primary);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.header {
+
+    padding:20px 40px;
+
+    background-color:var(--color-primary);
+
 }
-.link{
-    text-decoration: none;
-    color: var(--color-text-light);
-    font-size: 30px;
-    font-family: var(--font-main);
+
+
+.navbar-brand {
+
+    color:var(--color-text-light);
+
+    font-family:var(--font-main);
+
+    font-size:var(--text-h1);
+
+    font-weight:700;
+
 }
+
+.navbar-brand:hover {
+
+    color:var(--color-text-light);
+}
+
+
+.header-1 {
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+
+.link {
+
+    text-decoration:none;
+
+    color:var(--color-text-light);
+
+    font-family:var(--font-main);
+
+    font-size:30px;
+
+}
+
 
 .link:hover {
-    opacity: 0.8;
+
+    color:var(--color-accent);
+
 }
 
-.header h1 {
-    color: var(--color-text-light);
-    transform: none;
-    font-size: var(--text-h1);
-    font-family: var(--font-main);
+/* Navbar mobile button */
+
+
+.navbar-toggler {
+
+    border-color:var(--color-text-light);
+
 }
 
-.header-1{
+
+
+.navbar-toggler-icon {
+
+    filter:invert(1);
+
+}
+
+
+
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+
+
+#themeToggle {
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* =========================
+   MISSION SECTION 
+========================= */
+
+
+
+
+
+
+
+
+.mission-section {
+
+    padding:60px 0;
+
+}
+
+
+
+.mission-box {
+    background: red;
+    width: 500px;
+    height: 500px;
+    position: relative;
     display: flex;
-    padding-top: 20px;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    
+}
+.mission-box .mission-text{
+    /* background: blue; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    
+}
+.mission-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+.mission-box:hover img {
+    scale: 1.1;
+    transition: 0.3s ease;
+
 }
 
-to here
 
-.neck-1{
-    background-color: var(--color-accent);
+
+.mission-card {
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:0.3s ease;
+
 }
 
 
@@ -67,80 +234,388 @@ to here
 
 
 
-/* ---- Footer start from here ---- */
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
 
 .site-footer {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  padding: 60px 96px 20px;
+
+    background-color:var(--color-primary);
+
+    color:var(--color-text-light);
+
+    padding:60px 0 20px;
+
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+
+
+
+
+.site-footer h2,
+.site-footer h4 {
+
+    font-family:var(--font-main);
+
+    color:var(--color-text-light);
+
 }
 
-.footer-brand h2,
-.footer-links h4,
-.footer-contact h4 {
-  font-family: var(--font-main);
-  color: var(--color-text-light);
-  transform: none;
-  margin-bottom: 16px;
+
+
+
+
+.site-footer h2 {
+
+    font-size:28px;
+
 }
 
-.footer-brand h2 {
-  font-size: 28px;
+
+
+
+
+.site-footer h4 {
+
+    font-size:18px;
+
 }
 
-.footer-links h4,
-.footer-contact h4 {
-  font-size: 18px;
+
+
+
+
+.site-footer p {
+
+    font-family:var(--font-main);
+
+    color:var(--color-text-light);
+
+    opacity:0.85;
+
 }
 
-.footer-brand p,
-.footer-contact p {
-  font-family: var(--font-main);
-  color: var(--color-text-light);
-  font-size: 16px;
-  opacity: 0.85;
-}
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+
+
 
 .footer-link {
-  font-family: var(--font-main);
-  color: var(--color-text-light);
-  font-size: 16px;
-  text-decoration: none;
-  opacity: 0.85;
+
+    font-family:var(--font-main);
+
+    color:var(--color-text-light);
+
+    text-decoration:none;
+
+    opacity:0.85;
+
 }
+
+
+
+
 
 .footer-link:hover {
-  opacity: 1;
-  text-decoration: underline;
+
+    color:var(--color-accent);
+
+    opacity:1;
+
+    text-decoration:underline;
+
 }
+
+
+
+
+
+.footer-contact i {
+
+    color:var(--color-accent);
+
+    font-size:20px;
+
+}
+
+
+
+
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,0.2);
+
 }
+
+
+
+
 
 .footer-bottom p {
-  font-family: var(--font-main);
-  color: var(--color-text-light);
-  font-size: 14px;
-  opacity: 0.7;
+
+    font-size:14px;
+
+    opacity:0.7;
+
 }
 
-/* to here */
+/* =========================
+   MODERN BENTO MISSION
+========================= */
+
+
+.mission-section {
+
+    padding: 100px 0;
+
+}
+
+
+
+.mission-heading {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+}
+
+
+
+.mission-heading h1 {
+
+    font-family: var(--font-main);
+
+    font-size: var(--text-h1);
+
+    font-weight: 700;
+
+    color: var(--color-primary);
+
+}
+
+
+
+.mission-heading p {
+
+    font-family: var(--font-main);
+
+    font-size: var(--text-body);
+
+    color: var(--color-primary);
+
+}
+
+
+
+
+
+/* mission grid */
+
+
+.bento-mission {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-auto-rows: 250px;
+
+    gap: 25px;
+
+}
+
+
+
+
+
+.mission-box.box-large {
+
+    grid-column: span 2;
+
+}
+
+
+
+
+
+.mission-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+
+
+
+.mission-box:hover img {
+
+    transform: scale(1.1);
+    transition: 0.3s ease;
+
+}
+
+
+
+
+
+/* Dark gradient over images */
+
+
+.mission-text {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: end;
+
+    padding: 30px;
+
+
+    background: linear-gradient(
+        transparent,
+        rgba(45, 90, 74, 0.85)
+    );
+
+}
+
+
+
+
+
+.mission-text h3 {
+
+    color: rgba(255, 255, 255, 0.899);
+
+    font-family: var(--font-main);
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+
+
+
+
+.mission-text p {
+
+    color: white;
+
+    font-family: var(--font-main);
+
+    font-size: 18px;
+
+    margin-top: 8px;
+
+}
+
+
+
+
+
+/* Hover lift effect */
+
+
+.mission-box:hover {
+
+    transform: translateY(-8px);
+
+    transition: 0.3s ease;
+
+}
+
+
+
+
+
+/* Page load animation */
+
+
+@keyframes fadeUp {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width: 768px) {
+
+    .mission-section {
+
+        padding: 60px 0;
+
+    }
+
+    .mission-heading h1 {
+
+        font-size: 45px;
+
+    }
+
+    .bento-mission {
+
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 300px;
+
+    }
+
+    .mission-box.box-large {
+
+        grid-column: auto;
+
+    }
+
+
+}
