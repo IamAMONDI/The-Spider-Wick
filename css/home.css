@@ -81,7 +81,7 @@ h1 {
   font-family: var(--font-main);
   font-size: var(--text-h1);
   font-weight: 700;
-  color: var(--color-text-light);
+  color: var( --color-primary);
   transform: translateY(-40px);
 }
 
