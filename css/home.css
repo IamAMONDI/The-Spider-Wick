@@ -103,6 +103,10 @@ h3 {
   color: var(--color-text-light);
 }
 
+.mb-0{
+  color: var(--color-text-light);
+}
+
 p {
   font-family: var(--font-main);
   font-size: var(--text-body);
