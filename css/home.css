@@ -121,6 +121,20 @@ button {
   font-weight: 600;
 }
 
+
+.change-user-btn{
+   background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border: none;
+  padding: 18px 40px;
+  border-radius: 50px;
+  margin-bottom: 50px;
+  font-size: var(--text-button);
+  font-family: var(--font-main);
+  cursor: pointer;
+  font-weight: 600;
+
+}
 .image-wrapper {
   width: 100%;
   position: relative;

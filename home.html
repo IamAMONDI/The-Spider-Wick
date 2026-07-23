@@ -70,7 +70,7 @@
             <h1 class="hero-title">Empowerring Care</h1>
             <div class="text">
                 <p>The Wix example looks like a large ellipse slicing the top of the image, so clip-path with a custom shape gives you that exact effect</p>
-                <a href="contact.html" class="contact" >Contact Us</a>
+                <button class="change-user-btn" >Before you continue, click me</button>
             </div>
             <div class="image-wrapper">
                 <img src="assets/image.jpg" class="curved-image"/>
@@ -83,7 +83,7 @@
     <section class="middle-section">
         <div class="wid">
             <div class="wid-text">
-                <h1>Our Story</h1>
+                <h2>Our Story</h2>
                 <h2>Discover how we are making a difference in the home healthcare industry.</h2>
                 <p>This is a space to share more about your business. Explain who's behind it, what it does and what this site has to offer. It's an opportunity to tell the story behind the business or describe a special service or product it offers. You can use this section to share your company's history or highlight a particular feature that sets it apart from competitors.</p>
                 <a href="about.html" class="contact" >About Us</a>
@@ -96,14 +96,14 @@
 
     <section class="hero focus-section">
         <div>
-            <h1>Specialized Focus</h1>
+            <h2>Specialized Focus</h2>
             <div class="focus-grid">
                 <div class="focus-card">
                     <h1>Eldercare</h1>
                     <p>This is the space to showcase the specific characteristics and capabilities that make your product stand out.</p>
                 </div>
                 <div class="focus-card">
-                    <h1>Eldercare</h1>
+                    <h2>Eldercare</h2>
                     <p>This is the space to showcase the specific characteristics and capabilities that make your product stand out.</p>
                 </div>
                 <div class="focus-card">
@@ -280,6 +280,29 @@ toggle.addEventListener("click", () => {
 
     }
 
+});
+
+
+// Personalized welcome message, following  Web Storage API pattern.
+
+let myButton = document.querySelector(".change-user-btn");
+let myHeading = document.querySelector("h1");
+
+function setUserName() {
+  const myName = prompt("Please enter your name.");
+  localStorage.setItem("name", myName);
+  myHeading.textContent = `Welcome to Mindwell, ${myName}`;
+}
+
+if (!localStorage.getItem("name")) {
+  setUserName();
+} else {
+  const storedName = localStorage.getItem("name");
+  myHeading.textContent = `Welcome to Mindwell, ${storedName}`;
+}
+
+myButton.addEventListener("click", () => {
+  setUserName();
 });
 
 </script>
