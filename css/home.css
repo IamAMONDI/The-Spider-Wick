@@ -210,11 +210,11 @@ button {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 400px;
-  gap: 40px;
+  gap: 30px;
 }
 
 .wid-text h1{
-  transform: translateY(50px);
+  transform: translateY(40px);
 }
   
 
