@@ -213,6 +213,11 @@ button {
   gap: 40px;
 }
 
+.wid-text h1,
+.wid-text p {
+  margin: 0;
+}
+
 .wid-image {
   flex: 1 1 400px;
   display: flex;
