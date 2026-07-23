@@ -205,7 +205,10 @@ button {
 }
 
 .wid-text {
-  flex: 1 1 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 400px;
+  gap: 30px;
 }
 
 .wid-image {
