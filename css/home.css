@@ -241,24 +241,67 @@ button {
 
 /* ---- "Specialized Focus" section ---- */
 
+
+
 .focus-section {
-  padding: 40px;
+  background: #F5F1D9;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.focus-section > div {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.focus-section h2 {
+  color: #2E4B3A;
+}
+
+/* The "Get Involved" title above the grid */
+.focus-section > div > h2 {
+  font-size: 28px;
+  margin-bottom: 48px;
 }
 
 .focus-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .focus-card {
-  flex: 1 1 300px;
+  flex: 1 1 280px;
+  max-width: 320px;
 }
 
-.focus-card h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.focus-card h2 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.focus-card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3F4A3F;
+  margin: 0;
+}
+
+.contact {
+  display: inline-block;
+  background: #2E4B3A;
+  color: #F5F1D9;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.contact:hover {
+  background: #24392D;
 }
 
 /* ---- Footer start from here ---- */
