@@ -108,6 +108,11 @@ h3 {
   font-size: var(--text-button);
 }
 
+.mb-0:hover {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
 p {
   font-family: var(--font-main);
   font-size: var(--text-body);
