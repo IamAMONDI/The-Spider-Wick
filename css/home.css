@@ -244,9 +244,10 @@ button {
 
 
 .focus-section {
-  background: #F5F1D9;
+  background: var(--color-text-light);
   padding: 80px 24px;
   text-align: center;
+  font-family: var(--font-main);
 }
 
 .focus-section > div {
@@ -255,12 +256,12 @@ button {
 }
 
 .focus-section h2 {
-  color: #2E4B3A;
+  color: var(--color-primary);
 }
 
 /* The "Get Involved" title above the grid */
 .focus-section > div > h2 {
-  font-size: 28px;
+  font-size: var(--text-h1);
   margin-bottom: 48px;
 }
 
@@ -278,30 +279,33 @@ button {
   max-width: 320px;
 }
 
-.focus-card h2 {
-  font-size: 18px;
+.focus-card h3 {
+  font-size: var(--text-h3);
   margin: 0 0 12px;
+  color: var(--color-primary);
 }
 
 .focus-card p {
-  font-size: 15px;
+  font-size: var(--text-body);
   line-height: 1.5;
-  color: #3F4A3F;
+  color: var(--color-primary);
   margin: 0;
 }
 
 .contact {
   display: inline-block;
-  background: #2E4B3A;
-  color: #F5F1D9;
+  background: var(--color-primary);
+  color: var(--color-text-light);
   text-decoration: none;
   padding: 14px 32px;
   border-radius: 999px;
   font-weight: 500;
+  font-size: var(--text-button);
 }
 
 .contact:hover {
-  background: #24392D;
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
 
 /* ---- Footer start from here ---- */
