@@ -103,6 +103,7 @@ h2{
 h3 {
   font-family: var(--font-main);
   color: var(--color-text-light);
+  font-size: var(--text-h3);
 }
 
 .mb-0{
