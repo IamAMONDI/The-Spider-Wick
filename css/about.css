@@ -11,6 +11,43 @@
 }
 
 
+[data-bs-theme="light"] {
+
+    --bs-body-bg: beige;
+    --bs-body-color: var(--color-primary);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45, 90, 74;
+
+    --bs-link-color: var(--color-primary);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-primary);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg: white;
+
+}
+
+
+[data-bs-theme="dark"] {
+
+    --bs-body-bg: #121212;
+    --bs-body-color: var(--color-text-light);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45,90,74;
+
+    --bs-link-color: var(--color-text-light);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-text-light);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg:#1e1e1e;
+
+}
+
 /* =====================================================
    GLOBAL STYLES
 ===================================================== */
@@ -23,8 +60,8 @@ html {
 body {
 
     font-family: var(--font-main);
-    background-color: white;
-    color: var(--color-primary);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
 
     line-height: 1.6;
 
@@ -61,23 +98,6 @@ a {
     margin: auto;
 
 }
-
-#themeToggle {
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
 
 
 
@@ -147,165 +167,137 @@ p {
 /* =====================================================
    HEADER & NAVIGATION
 ===================================================== */
-/* Header: start from here */
-.heroo{
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+.heroo {
 
+    position:sticky;
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: var(--color-primary);
-    
-}
+    top:0;
 
-
-
-/* Links */
-
-a {
-
-    text-decoration: none;
-
-}
-
-
-
-/* General container used across sections */
-
-.section-container {
-
-    width: min(1200px, 90%);
-    margin: auto;
+    z-index:100;
 
 }
 
 
 
 
-/* =====================================================
-   TYPOGRAPHY
-===================================================== */
+.header {
 
+    padding:20px 40px;
 
-h1,
-h2,
-h3,
-h4 {
-
-    font-family: var(--font-main);
-    color: var(--color-primary);
-
-    line-height: 1.2;
+    background-color:var(--color-primary);
 
 }
 
 
 
-h1 {
-
-    font-size: var(--text-h1);
-
-}
-
-.header-1{
-    display: flex;
-    padding-top: 20px;
-    gap: 20px;
-    
-}
-
-/* to here */
 
 
-.site-header {
 
-    position: sticky;
-    top: 0;
 
-    z-index: 1000;
+.navbar-brand {
 
-    background-color: var(--color-primary);
+    color:var(--color-text-light);
+
+    font-family:var(--font-main);
+
+    font-size:var(--text-h1);
+
+    font-weight:700;
 
 }
 
 
 
-.navbar {
 
+.navbar-brand:hover {
 
-    width: min(1200px, 90%);
-    margin: auto;
-
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-
-    padding: 20px 0;
-
+    color:var(--color-text-light);
 
 }
 
 
 
-/* Website Logo */
 
+.header-1 {
 
-.logo {
+    display:flex;
 
-    font-size: 35px;
+    align-items:center;
 
-    font-weight: 700;
-
-    color: var(--color-text-light);
+    gap:20px;
 
 }
 
 
 
-/* Navigation Links */
 
+.link {
 
-.nav-links {
+    text-decoration:none;
 
-    display: flex;
+    color:var(--color-text-light);
 
-    align-items: center;
+    font-family:var(--font-main);
 
-    gap: 30px;
-
-}
-
-
-
-.nav-links a {
-
-    color: var(--color-text-light);
-
-    font-size: 18px;
-
-    font-weight: 500;
-
-    transition: 0.3s ease;
+    font-size:18px; /* was 30px — far too large for a nav link,
+                        this was the main cause of the header
+                        wrapping onto two lines */
 
 }
 
 
 
-.nav-links a:hover,
-.nav-links .active {
 
 
-    color: var(--color-text-light);
+.link:hover {
+
+    color:var(--color-accent);
+
+}
+
+
+
+
+
+/* Navbar mobile button */
+
+
+.navbar-toggler {
+
+    border-color:var(--color-text-light);
+
+}
+
+
+
+.navbar-toggler-icon {
+
+    filter:invert(1);
+
+}
+
+
+
+
+
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+
+
+#themeToggle {
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -329,56 +321,23 @@ h1 {
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    color: var(--color-primary);
+    margin-bottom: 25px;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    color: var(--color-primary);
+    font-size: 24px;
+    max-width: 650px;
+    margin: auto;
     line-height: 1.6;
 }
 
 
-
-.hero-content {
-
-
-    max-width: 800px;
-
-
-}
-
-
-
-.hero-content h1 {
-
-
-    color:var(--color-primary);
-
-    margin-bottom: 25px;
-
-
-}
-
-
-
-.hero-content p {
-
-
-    color:var(--color-primary);
-
-    font-size: 24px;
-
-    max-width: 650px;
-
-    margin: auto;
-
-
-}
 
 /* =====================================================
    WHO WE ARE SECTION
@@ -452,10 +411,6 @@ h1 {
 
 /* =====================================================
    MISSION & VISION SECTION
-===================================================== */
-
-/* =====================================================
-   TEAM SECTION
 ===================================================== */
 
 .mission-vision {
@@ -820,6 +775,12 @@ h1 {
 
 }
 
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 .site-footer {
 
     background-color: var(--color-primary);
@@ -841,19 +802,33 @@ h1 {
 }
 
 
-.site-footer p,
-.site-footer h2,
-.site-footer h4,
-.site-footer a {
+.site-footer i {
 
-    color: var(--color-text-light);
+    color: var(--color-accent);
+
+} /* <-- this closing brace was missing, which broke
+        every single footer rule written after it */
+
+
+.footer-content {
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
 
 }
 
 
-.site-footer i {
+.footer-brand h2 {
 
-    color: var(--color-accent);
+    margin-bottom: 16px;
+
+}
+
 
 .footer-brand p,
 .footer-contact p {
@@ -896,5 +871,3 @@ h1 {
   font-size: 14px;
   opacity: 0.7;
 }
-
-/* to here */
