@@ -326,6 +326,7 @@ button {
 
 .col-md-4 p{
   color: var(--color-text-light);
+  font-size: var(--text-body);
 }
 
 .footer-content {
