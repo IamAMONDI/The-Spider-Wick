@@ -128,7 +128,7 @@ button {
 
 
 .change-user-btn{
-   background-color: var(--color-primary);
+  background-color: var(--color-primary);
   color: var(--color-text-light);
   border: none;
   padding: 18px 40px;
