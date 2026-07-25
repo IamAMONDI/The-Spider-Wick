@@ -288,13 +288,19 @@ toggle.addEventListener("click", () => {
 });
 
 
-// Personalized welcome message, following  Web Storage API pattern.
+// Personalized welcome message, following Web Storage API pattern.
 
 let myButton = document.querySelector(".change-user-btn");
 let myHeading = document.querySelector(".hero-title");
 
 function setUserName() {
   const myName = prompt("Please enter your name.");
+
+  // If user clicks Cancel (null) or leaves it empty, do nothing
+  if (!myName || myName.trim() === "") {
+    return;
+  }
+
   localStorage.setItem("name", myName);
   myHeading.textContent = `Welcome to Mindwell, ${myName}`;
 }
