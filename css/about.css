@@ -112,7 +112,7 @@ h3,
 h4 {
 
     font-family: var(--font-main);
-    color: var(--color-primary);
+    color: var(--bs-body-color);
 
     line-height: 1.2;
 
@@ -147,7 +147,7 @@ h3 {
 p {
 
     font-size: var(--text-body);
-    color: var(--color-primary);
+    color: var(--bs-body-color);
 
 }
 
@@ -311,7 +311,7 @@ p {
 
 /* About Hero Section */
 .about-hero {
-    background-color: var(--color-text-light); /* beige */
+    background-color: var(--bs-card-bg);
     min-height: 400px;
     display: flex;
     justify-content: center;
@@ -418,7 +418,7 @@ p {
 
     padding: 90px 0;
 
-    background-color: #f8f8f5;
+    background-color: var(--bs-card-bg);
 
 
 }
@@ -449,7 +449,7 @@ p {
 .mission-card {
 
 
-    background-color:var(--color-text-light);
+    
 
 
     padding: 45px 35px;
@@ -566,7 +566,7 @@ p {
 .value-card {
 
 
-    background-color: var(--color-text-light);
+    background-color: var(--bs-card-bg);
 
 
     padding:40px 25px;
@@ -582,6 +582,10 @@ p {
                 box-shadow .3s ease;
 
 
+}
+
+.core-values{
+    width: 100%;
 }
 
 
@@ -651,7 +655,7 @@ p {
     padding:90px 0;
 
 
-    background-color:#f8f8f5;
+    background-color: var(--bs-card-bg);
 
 
 }
@@ -698,8 +702,7 @@ p {
 .team-card {
 
 
-    background:white;
-
+    background-color: var(--bs-card-bg);
 
     padding:30px 20px;
 
