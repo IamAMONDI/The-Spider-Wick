@@ -21,6 +21,7 @@ html {
 
 
 body {
+<<<<<<< Updated upstream
 
     font-family: var(--font-main);
     background-color: white;
@@ -162,25 +163,78 @@ p {
     padding: 20px 40px;
     background-color: var(--color-primary);
     
+=======
+
+    font-family: var(--font-main);
+    background-color: white;
+    color: var(--color-primary);
+
+    line-height: 1.6;
+
 }
-.link{
+
+
+
+/* Images should never overflow their containers */
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+>>>>>>> Stashed changes
+}
+
+
+
+/* Links */
+
+a {
+
     text-decoration: none;
-    color: var(--color-text-light);
-    font-size: 30px;
+
+}
+
+
+
+/* General container used across sections */
+
+.section-container {
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+}
+
+
+
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+
+h1,
+h2,
+h3,
+h4 {
+
     font-family: var(--font-main);
+    color: var(--color-primary);
+
+    line-height: 1.2;
+
 }
 
-.link:hover {
-    opacity: 0.8;
-}
 
-.header h1 {
-    color: var(--color-text-light);
-    transform: none;
+
+h1 {
+
     font-size: var(--text-h1);
-    font-family: var(--font-main);
+
 }
 
+<<<<<<< Updated upstream
 .header-1{
     display: flex;
     padding-top: 20px;
@@ -204,6 +258,64 @@ p {
 
 
 
+=======
+
+
+h2 {
+
+    font-size: 40px;
+
+}
+
+
+
+h3 {
+
+    font-size: var(--text-h3);
+
+}
+
+
+
+p {
+
+    font-size: var(--text-body);
+    color: var(--color-primary);
+
+}
+
+
+
+.section-title {
+
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+
+
+
+
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
+
+
+.site-header {
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background-color: var(--color-primary);
+
+}
+
+
+
+>>>>>>> Stashed changes
 .navbar {
 
 
@@ -211,6 +323,7 @@ p {
     margin: auto;
 
 
+<<<<<<< Updated upstream
     display: flex;
 
     justify-content: space-between;
@@ -316,16 +429,148 @@ p {
 
 
     max-width: 800px;
+=======
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+    padding: 20px 0;
+>>>>>>> Stashed changes
 
 
 }
 
 
 
+<<<<<<< Updated upstream
 .hero-content h1 {
 
 
     color:var(--color-primary);
+
+    margin-bottom: 25px;
+=======
+/* Website Logo */
+
+
+.logo {
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    color: var(--color-text-light);
+
+}
+
+
+
+/* Navigation Links */
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+
+.nav-links a {
+
+    color: var(--color-text-light);
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+.nav-links a:hover,
+.nav-links .active {
+
+
+    color: var(--color-accent);
+
+}
+
+
+
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+
+.about-hero {
+
+
+    min-height: 600px;
+
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    text-align: center;
+
+
+    padding: 80px 20px;
+
+
+
+    background-color: var(--color-primary);
+>>>>>>> Stashed changes
+
+
+}
+
+
+
+<<<<<<< Updated upstream
+.hero-content p {
+
+
+    color:var(--color-primary);
+
+    font-size: 24px;
+
+    max-width: 650px;
+
+    margin: auto;
+=======
+.hero-content {
+
+
+    max-width: 800px;
+>>>>>>> Stashed changes
+
+
+}
+
+<<<<<<< Updated upstream
+=======
+
+
+.hero-content h1 {
+
+
+    color: var(--color-text-light);
 
     margin-bottom: 25px;
 
@@ -337,7 +582,7 @@ p {
 .hero-content p {
 
 
-    color:var(--color-primary);
+    color: var(--color-text-light);
 
     font-size: 24px;
 
@@ -348,6 +593,7 @@ p {
 
 }
 
+>>>>>>> Stashed changes
 /* =====================================================
    WHO WE ARE SECTION
 ===================================================== */
@@ -410,6 +656,8 @@ p {
 
     line-height: 1.8;
 
+<<<<<<< Updated upstream
+=======
 }
 
 
@@ -423,6 +671,249 @@ p {
 ===================================================== */
 
 
+.mission-vision {
+
+
+    padding: 90px 0;
+
+    background-color: #f8f8f5;
+
+
+}
+
+
+
+
+.mission-container {
+
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+
+
+}
+
+
+
+
+.mission-card {
+
+
+    background-color: white;
+
+
+    padding: 45px 35px;
+
+
+    text-align: center;
+
+
+    border-radius: 25px;
+
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+
+    transition: transform 0.3s ease;
+
+
+}
+
+
+
+
+.mission-card:hover {
+
+
+    transform: translateY(-10px);
+
+
+}
+
+
+
+
+.mission-card i {
+
+
+    font-size: 45px;
+
+
+    color: var(--color-primary);
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+.mission-card h3 {
+
+
+    margin-bottom: 20px;
+
+
+}
+
+
+
+
+.mission-card p {
+
+
+    line-height: 1.7;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   CORE VALUES SECTION
+===================================================== */
+
+
+.core-values {
+
+
+    padding: 90px 0;
+
+
+}
+
+
+
+.values-container {
+
+
+    width: min(1200px,90%);
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns: repeat(4,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+.value-card {
+
+
+    background-color: var(--color-accent);
+
+
+    padding:40px 25px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+
+
+}
+
+
+
+
+
+.value-card:hover {
+
+
+    transform:translateY(-10px);
+
+
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+
+
+}
+
+
+
+
+
+.value-card i {
+
+
+    font-size:45px;
+
+
+    color:var(--color-primary);
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.value-card h3 {
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.value-card p {
+
+
+    font-size:18px;
+
+
+    line-height:1.6;
+
+
+>>>>>>> Stashed changes
+}
+
+
+
+
+
+
+
+/* =====================================================
+   MISSION & VISION SECTION
+===================================================== */
+
+/* =====================================================
+   TEAM SECTION
+===================================================== */
+
+<<<<<<< Updated upstream
 .mission-vision {
 
 
@@ -654,6 +1145,8 @@ p {
    TEAM SECTION
 ===================================================== */
 
+=======
+>>>>>>> Stashed changes
 
 .team-section {
 
@@ -741,6 +1234,11 @@ p {
 }
 
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .team-card img {
 
 
@@ -762,6 +1260,12 @@ p {
 }
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
 .team-card h3 {
 
 
@@ -793,6 +1297,19 @@ p {
 
     padding: 60px 0 20px;
 
+<<<<<<< Updated upstream
+}
+
+
+.site-footer p,
+.site-footer h2,
+.site-footer h4,
+.site-footer a {
+
+    color: var(--color-text-light);
+
+=======
+>>>>>>> Stashed changes
 }
 
 
@@ -805,33 +1322,12 @@ p {
 
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
-.footer-brand h2,
-.footer-links h4,
-.footer-contact h4 {
-  font-family: var(--font-main);
-  color: var(--color-text-light);
-  transform: none;
-  margin-bottom: 16px;
-}
+.site-footer i {
 
-.footer-brand h2 {
-  font-size: 28px;
-}
+    color: var(--color-accent);
 
-.footer-links h4,
-.footer-contact h4 {
-  font-size: 18px;
-}
-
+<<<<<<< Updated upstream
 .footer-brand p,
 .footer-contact p {
   font-family: var(--font-main);
@@ -875,3 +1371,6 @@ p {
 }
 
 /* to here */
+=======
+}
+>>>>>>> Stashed changes
