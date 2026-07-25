@@ -62,6 +62,22 @@ a {
 
 }
 
+#themeToggle {
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
 
 
 
@@ -131,6 +147,48 @@ p {
 /* =====================================================
    HEADER & NAVIGATION
 ===================================================== */
+/* Header: start from here */
+.heroo{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-primary);
+    
+}
+.link{
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 30px;
+    font-family: var(--font-main);
+}
+
+.link:hover {
+    opacity: 0.8;
+}
+
+.header h1 {
+    color: var(--color-text-light);
+    transform: none;
+    font-size: var(--text-h1);
+    font-family: var(--font-main);
+}
+
+.header-1{
+    display: flex;
+    padding-top: 20px;
+    gap: 20px;
+    
+}
+
+/* to here */
 
 
 .site-header {
@@ -215,7 +273,7 @@ p {
 .nav-links .active {
 
 
-    color: var(--color-accent);
+    color: var(--color-text-light);
 
 }
 
@@ -227,30 +285,29 @@ p {
    HERO SECTION
 ===================================================== */
 
-
+/* About Hero Section */
 .about-hero {
-
-
-    min-height: 600px;
-
-
+    background-color: var(--color-text-light); /* beige */
+    min-height: 400px;
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-
     text-align: center;
+    padding: 60px 20px;
+}
 
+.hero-content {
+    max-width: 700px;
+}
 
-    padding: 80px 20px;
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
 
-
-
-    background-color: var(--color-primary);
-
-
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 
@@ -268,7 +325,7 @@ p {
 .hero-content h1 {
 
 
-    color: var(--color-text-light);
+    color:var(--color-primary);
 
     margin-bottom: 25px;
 
@@ -280,7 +337,7 @@ p {
 .hero-content p {
 
 
-    color: var(--color-text-light);
+    color:var(--color-primary);
 
     font-size: 24px;
 
@@ -402,7 +459,7 @@ p {
 .mission-card {
 
 
-    background-color: white;
+    background-color:var(--color-text-light);
 
 
     padding: 45px 35px;
@@ -519,7 +576,7 @@ p {
 .value-card {
 
 
-    background-color: var(--color-accent);
+    background-color: var(--color-text-light);
 
 
     padding:40px 25px;
@@ -592,13 +649,6 @@ p {
 
 
 }
-
-
-
-
-
-
-
 
 /* =====================================================
    TEAM SECTION
@@ -691,8 +741,6 @@ p {
 }
 
 
-
-
 .team-card img {
 
 
@@ -712,9 +760,6 @@ p {
 
 
 }
-
-
-
 
 
 .team-card h3 {
@@ -760,9 +805,73 @@ p {
 
 }
 
-
-.site-footer i {
-
-    color: var(--color-accent);
-
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.footer-brand h2,
+.footer-links h4,
+.footer-contact h4 {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  transform: none;
+  margin-bottom: 16px;
+}
+
+.footer-brand h2 {
+  font-size: 28px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 18px;
+}
+
+.footer-brand p,
+.footer-contact p {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--color-primary);
+}
+
+.footer-bottom p {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* to here */
