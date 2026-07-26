@@ -324,6 +324,11 @@ button {
   padding: 60px 96px 20px;
 }
 
+.col-md-4 p{
+  color: var(--color-text-light);
+  font-size: 19px;
+}
+
 .footer-content {
   display: flex;
   flex-wrap: wrap;
