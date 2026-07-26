@@ -5,8 +5,14 @@
    team's home.css so both pages render identically.
    ========================================================== */
 
+body {
+    margin: 0;
+    font-family: var(--font-main);
+}
+
 /* Header: start from here */
-.heroo{
+.heroo {
+    background-color: var(--color-primary);
     position: sticky;
     top: 0;
     z-index: 100;
