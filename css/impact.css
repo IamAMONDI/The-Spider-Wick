@@ -1,0 +1,258 @@
+/* ==========================================================
+   Impact page — styles
+   Requires variable.css to be loaded first.
+   Built entirely with vanilla CSS (Flexbox, Grid, Media Queries)
+   ========================================================== */
+
+/* Base Reset & Body */
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: var(--color-text-light); /* Off-white background */
+    color: var(--color-primary);
+    overflow-x: hidden;
+}
+
+/* ---- Impact Main Content ---- */
+.impact-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 100px 20px;
+}
+
+/* Hero Section */
+.impact-hero {
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 60px;
+}
+
+.hero-title {
+    font-size: 100px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.8;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Stats Bento Grid */
+.impact-stats {
+    margin-bottom: 120px;
+}
+
+.bento-grid {
+    display: grid;
+    /* This creates automatic responsiveness without media queries! */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.bento-item {
+    background-color: rgba(23, 51, 44, 0.05); /* Very subtle translucent dark green */
+    border-radius: 24px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(23, 51, 44, 0.08);
+}
+
+.bento-item.wide {
+    /* Make the last item span full width on large screens */
+    grid-column: 1 / -1;
+}
+
+.bento-number {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 16px;
+    color: var(--color-primary);
+}
+
+.bento-label {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Testimonial Section */
+.impact-testimonial {
+    padding: 120px 20px;
+    text-align: center;
+    margin-bottom: 80px;
+    background-color: var(--color-primary); /* Dark green background */
+    color: var(--color-text-light); /* Light text */
+    border-radius: 32px;
+}
+
+.testimonial-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.impact-testimonial blockquote {
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0 0 40px 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.impact-testimonial cite {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Visual Gallery Section */
+.impact-visuals {
+    margin-bottom: 120px;
+}
+
+.visual-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.visual-image-wrapper {
+    width: 80%;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.visual-image-wrapper.right {
+    align-self: flex-end;
+}
+
+.visual-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+/* Call to Action */
+.impact-cta {
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.impact-cta h2 {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 20px 48px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+.cta-button:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================================
+   MEDIA QUERIES (The heart of explicit responsiveness)
+   These rules apply ONLY when the screen width is small.
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .impact-testimonial blockquote {
+        font-size: 40px;
+    }
+    
+    .visual-image-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Shrink the massive hero typography on phones */
+    .hero-title {
+        font-size: 60px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    /* Shrink the numbers */
+    .bento-number {
+        font-size: 56px;
+    }
+
+    .impact-testimonial {
+        padding: 60px 20px;
+    }
+    
+    .impact-testimonial blockquote {
+        font-size: 32px;
+    }
+
+    .impact-cta h2 {
+        font-size: 44px;
+    }
+
+    .cta-button {
+        font-size: 20px;
+        padding: 16px 32px;
+    }
+}
+
+/* ==========================================================
+   ANIMATION CLASSES (For Vanilla JS Intersection Observer)
+   ========================================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.left {
+    transform: translateX(-30px);
+}
+
+.fade-in.right {
+    transform: translateX(30px);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
