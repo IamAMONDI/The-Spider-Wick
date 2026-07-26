@@ -106,6 +106,12 @@ h3 {
   font-size: var(--text-h3);
 }
 
+h3:hover{
+  color: var(--color-accent);
+}
+
+
+
 .mb-0{
   color: var(--color-text-light);
   font-size: var(--text-button);
