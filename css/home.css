@@ -9,7 +9,10 @@ body {
 }
 
 /* Header: start from here */
-.heroo{
+
+
+.heroo {
+    background-color: var(--color-primary);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -101,6 +104,7 @@ h2{
 h3 {
   font-family: var(--font-main);
   color: var(--color-text-light);
+  font-size: var(--text-h3);
 }
 
 .mb-0{
@@ -319,6 +323,11 @@ button {
   background-color: var(--color-primary);
   color: var(--color-text-light);
   padding: 60px 96px 20px;
+}
+
+.col-md-4 p{
+  color: var(--color-text-light);
+  font-size: 19px;
 }
 
 .footer-content {

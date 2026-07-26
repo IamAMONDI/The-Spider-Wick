@@ -14,7 +14,7 @@
 
     <link href="css/home.css" rel="stylesheet">
 </head>
-<body>
+<body data-bs-theme="light">
      <!-- star from here -->
    
 <header class="heroo">
@@ -67,7 +67,7 @@
         <!-- to here this is what my team ment should have in their files as their header -->
     <section class="hero">
         <div class="hero-b">
-            <h1 class="hero-title">Empowerring Care</h1>
+            <h1 class="hero-title">Welcome to MindWell</h1>
             <div class="text">
                 <p> Mindwell is a space for young people in Mauritius to learn about mental health, find support, and know they're not alone.</p>
                 <button class="change-user-btn" >Before you continue, click me</button>
@@ -91,12 +91,12 @@
                 <a href="about.html" class="contact" >Lean more about us</a>
             </div>
             <div class="wid-image">
-                <img src="assets/image.jpg" class="story-image"/>
+                <img src="assets/mental.jpg" class="story-image"/>
             </div>
         </div>
     </section>
 
-    <section class="hero focus-section">
+    <section class=" focus-section">
         <div>
             <h1>Get Involved</h1>
             <div class="focus-grid">
@@ -288,13 +288,19 @@ toggle.addEventListener("click", () => {
 });
 
 
-// Personalized welcome message, following  Web Storage API pattern.
+// Personalized welcome message, following Web Storage API pattern.
 
 let myButton = document.querySelector(".change-user-btn");
 let myHeading = document.querySelector(".hero-title");
 
 function setUserName() {
   const myName = prompt("Please enter your name.");
+
+  // If user clicks Cancel (null) or leaves it empty, do nothing
+  if (!myName || myName.trim() === "") {
+    return;
+  }
+
   localStorage.setItem("name", myName);
   myHeading.textContent = `Welcome to Mindwell, ${myName}`;
 }

@@ -45,6 +45,7 @@ body {
 
 
 .heroo {
+    background-color: var(--color-primary);
 
     position: sticky;
 
@@ -172,7 +173,7 @@ body {
 
 
 .mission-box {
-    background: red;
+    background:red;
     width: 500px;
     height: 500px;
     position: relative;
@@ -224,6 +225,25 @@ body {
 
 
 
+/* =========================
+   MISSION GRID
+========================= */
+
+.mission-section {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Third box spans both columns and centers itself */
+.mission-box:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
 
 
 

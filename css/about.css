@@ -11,6 +11,43 @@
 }
 
 
+[data-bs-theme="light"] {
+
+    --bs-body-bg: beige;
+    --bs-body-color: var(--color-primary);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45, 90, 74;
+
+    --bs-link-color: var(--color-primary);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-primary);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg: white;
+
+}
+
+
+[data-bs-theme="dark"] {
+
+    --bs-body-bg: #121212;
+    --bs-body-color: var(--color-text-light);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45,90,74;
+
+    --bs-link-color: var(--color-text-light);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-text-light);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg:#1e1e1e;
+
+}
+
 /* =====================================================
    GLOBAL STYLES
 ===================================================== */
@@ -23,8 +60,8 @@ html {
 body {
 
     font-family: var(--font-main);
-    background-color: white;
-    color: var(--color-primary);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
 
     line-height: 1.6;
 
@@ -64,7 +101,6 @@ a {
 
 
 
-
 /* =====================================================
    TYPOGRAPHY
 ===================================================== */
@@ -76,7 +112,7 @@ h3,
 h4 {
 
     font-family: var(--font-main);
-    color: var(--color-primary);
+    color: var(--bs-body-color);
 
     line-height: 1.2;
 
@@ -111,7 +147,7 @@ h3 {
 p {
 
     font-size: var(--text-body);
-    color: var(--color-primary);
+    color: var(--bs-body-color);
 
 }
 
@@ -121,7 +157,6 @@ p {
 
     text-align: center;
     margin-bottom: 50px;
-
 }
 
 
@@ -133,89 +168,141 @@ p {
 ===================================================== */
 
 
-.site-header {
-
-    position: sticky;
-    top: 0;
-
-    z-index: 1000;
-
+.navbar-nav a {
+    font-size: var(--text-h3);
+} 
+.heroo {
     background-color: var(--color-primary);
 
-}
+    position:sticky;
 
+    top:0;
 
-
-.navbar {
-
-
-    width: min(1200px, 90%);
-    margin: auto;
-
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-
-    padding: 20px 0;
-
+    z-index:100;
 
 }
 
 
 
-/* Website Logo */
 
+.header {
 
-.logo {
+    padding:20px 40px;
 
-    font-size: 35px;
-
-    font-weight: 700;
-
-    color: var(--color-text-light);
+    background-color:var(--color-primary);
 
 }
 
 
 
-/* Navigation Links */
-
-
-.nav-links {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
-
-}
 
 
 
-.nav-links a {
 
-    color: var(--color-text-light);
+.navbar-brand {
 
-    font-size: 18px;
+    color:var(--color-text-light);
 
-    font-weight: 500;
+    font-family:var(--font-main);
 
-    transition: 0.3s ease;
+    font-size:var(--text-h1);
+
+    font-weight:700;
 
 }
 
 
 
-.nav-links a:hover,
-.nav-links .active {
+
+.navbar-brand:hover {
+
+    color:var(--color-text-light);
+
+}
 
 
-    color: var(--color-accent);
+
+
+.header-1 {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+
+.link {
+
+    text-decoration:none;
+
+    color:var(--color-text-light);
+
+    font-family:var(--font-main);
+
+    font-size:18px; /* was 30px — far too large for a nav link,
+                        this was the main cause of the header
+                        wrapping onto two lines */
+
+}
+
+
+
+
+
+.link:hover {
+
+    color:var(--color-accent);
+
+}
+
+
+
+
+
+/* Navbar mobile button */
+
+
+.navbar-toggler {
+
+    border-color:var(--color-text-light);
+
+}
+
+
+
+.navbar-toggler-icon {
+
+    filter:invert(1);
+
+}
+
+
+
+
+
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+
+
+#themeToggle {
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -227,69 +314,35 @@ p {
    HERO SECTION
 ===================================================== */
 
-
+/* About Hero Section */
 .about-hero {
-
-
-    min-height: 600px;
-
-
+    background-color: var(--bs-card-bg);
+    min-height: 400px;
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
-
     text-align: center;
-
-
-    padding: 80px 20px;
-
-
-
-    background-color: var(--color-primary);
-
-
+    padding: 60px 20px;
 }
-
-
 
 .hero-content {
-
-
     max-width: 800px;
-
-
 }
-
-
 
 .hero-content h1 {
-
-
-    color: var(--color-text-light);
-
+    color: var(--color-primary);
     margin-bottom: 25px;
-
-
 }
-
-
 
 .hero-content p {
-
-
-    color: var(--color-text-light);
-
+    color: var(--color-primary);
     font-size: 24px;
-
     max-width: 650px;
-
     margin: auto;
-
-
+    line-height: 1.6;
 }
+
+
 
 /* =====================================================
    WHO WE ARE SECTION
@@ -365,13 +418,12 @@ p {
    MISSION & VISION SECTION
 ===================================================== */
 
-
 .mission-vision {
 
 
     padding: 90px 0;
 
-    background-color: #f8f8f5;
+    background-color: var(--bs-card-bg);
 
 
 }
@@ -401,8 +453,6 @@ p {
 
 .mission-card {
 
-
-    background-color: white;
 
 
     padding: 45px 35px;
@@ -519,7 +569,7 @@ p {
 .value-card {
 
 
-    background-color: var(--color-accent);
+    background-color: var(--bs-card-bg);
 
 
     padding:40px 25px;
@@ -535,6 +585,10 @@ p {
                 box-shadow .3s ease;
 
 
+}
+
+.core-values{
+    width: 100%;
 }
 
 
@@ -593,13 +647,6 @@ p {
 
 }
 
-
-
-
-
-
-
-
 /* =====================================================
    TEAM SECTION
 ===================================================== */
@@ -611,7 +658,7 @@ p {
     padding:90px 0;
 
 
-    background-color:#f8f8f5;
+    background-color: var(--bs-card-bg);
 
 
 }
@@ -658,8 +705,7 @@ p {
 .team-card {
 
 
-    background:white;
-
+    background-color: var(--bs-card-bg);
 
     padding:30px 20px;
 
@@ -691,8 +737,6 @@ p {
 }
 
 
-
-
 .team-card img {
 
 
@@ -712,9 +756,6 @@ p {
 
 
 }
-
-
-
 
 
 .team-card h3 {
@@ -739,6 +780,12 @@ p {
 
 
 }
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .site-footer {
 
@@ -765,4 +812,68 @@ p {
 
     color: var(--color-accent);
 
+} /* <-- this closing brace was missing, which broke
+        every single footer rule written after it */
+
+
+.footer-content {
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+
+.footer-brand h2 {
+
+    margin-bottom: 16px;
+
+}
+
+
+.footer-brand p,
+.footer-contact p {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--color-primary);
+}
+
+.footer-bottom p {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: 14px;
+  opacity: 0.7;
 }
