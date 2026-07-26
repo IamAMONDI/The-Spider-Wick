@@ -728,6 +728,9 @@ p {
 
 }
 
+.team-card h3 {
+    color: var(--color-primary);
+}
 
 
 
