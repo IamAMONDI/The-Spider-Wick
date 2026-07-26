@@ -705,7 +705,7 @@ p {
 .team-card {
 
 
-    background-color: var(--bs-card-bg);
+    background-color: var(--color-text-light);
 
     padding:30px 20px;
 
@@ -810,7 +810,7 @@ p {
 
 .site-footer i {
 
-    color: var(--color-accent);
+    color: var(--color-text-light);
 
 } /* <-- this closing brace was missing, which broke
         every single footer rule written after it */
