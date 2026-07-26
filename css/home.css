@@ -11,8 +11,7 @@ body {
 /* Header: start from here */
 
 
-.heroo {
-    background-color: var(--color-primary);
+.heroo{
     position: sticky;
     top: 0;
     z-index: 100;
@@ -106,6 +105,12 @@ h3 {
   color: var(--color-text-light);
   font-size: var(--text-h3);
 }
+
+h3:hover{
+  color: var(--color-accent);
+}
+
+
 
 .mb-0{
   color: var(--color-text-light);

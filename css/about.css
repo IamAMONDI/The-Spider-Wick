@@ -172,7 +172,6 @@ p {
     font-size: var(--text-h3);
 } 
 .heroo {
-    background-color: var(--color-primary);
 
     position:sticky;
 
