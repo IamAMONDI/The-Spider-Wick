@@ -45,6 +45,7 @@ body {
 
 
 .heroo {
+    background-color: var(--color-primary);
 
     position: sticky;
 

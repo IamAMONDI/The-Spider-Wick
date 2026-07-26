@@ -11,7 +11,8 @@ body {
 /* Header: start from here */
 
 
-.heroo{
+.heroo {
+    background-color: var(--color-primary);
     position: sticky;
     top: 0;
     z-index: 100;
