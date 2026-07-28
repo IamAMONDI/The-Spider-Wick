@@ -8,53 +8,7 @@ body {
   margin: 0;
 }
 
-/* Header: start from here */
-
-
-.heroo {
-    background-color: var(--color-primary);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: var(--color-primary);
-    
-}
-.link{
-    text-decoration: none;
-    color: var(--color-text-light);
-    font-size: 30px;
-    font-family: var(--font-main);
-}
-
-.link:hover {
-    opacity: 0.8;
-}
-
-.header h1 {
-    color: var(--color-text-light);
-    transform: none;
-    font-size: var(--text-h1);
-    font-family: var(--font-main);
-}
-
-.header-1{
-    display: flex;
-    padding-top: 20px;
-    gap: 20px;
-    
-}
-
-
-
-/* to here */
+/* Header styles moved to variable.css for global use */
 
 .hero{
     background-color: var(--color-text-light);
