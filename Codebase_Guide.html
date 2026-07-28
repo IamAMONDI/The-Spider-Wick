@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px; }
+        h1 { color: #2D5A4A; font-size: 36px; border-bottom: 3px solid #c9e20e; padding-bottom: 10px; }
+        h2 { color: #2D5A4A; margin-top: 40px; font-size: 24px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h3 { color: #444; font-size: 18px; }
+        .box { background: #f9f9f9; border-left: 4px solid #2D5A4A; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 14px; color: #d63384; }
+        .qa { margin-bottom: 15px; }
+        .q { font-weight: bold; color: #2D5A4A; }
+        .a { margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>The Spider-Wick: Technical Codebase Guide</h1>
+    <p><em>A concise cheat-sheet for the entire codebase so you can confidently answer any technical question.</em></p>
+
+    <h2>1. Global Foundation (Used Everywhere)</h2>
+    <div class="box">
+        <strong>The "Global CSS" approach:</strong> Instead of copy-pasting colors on every page, we use <code>css/variable.css</code>. It contains CSS Custom Properties (Variables) like <code>--color-primary: #2D5A4A;</code>. This file also holds the Global Navbar (<code>.header</code>, <code>.link</code>). If the navbar breaks or needs a color change, you only edit <code>variable.css</code> and it updates everywhere instantly.
+    </div>
+    <div class="box">
+        <strong>Bootstrap 5:</strong> We use the Bootstrap framework for basic structure. Any time you see <code>container-fluid</code>, <code>row</code>, or <code>col-md-6</code>, that is Bootstrap automatically handling mobile-responsiveness for the basic text blocks.
+    </div>
+
+    <h2>2. Basic HTML Pages (Home, About, Mission, Contact)</h2>
+    <p>These pages share a very similar, stable HTML structure built on standard best practices:</p>
+    <ul>
+        <li><strong>Semantic Tags:</strong> We use <code>&lt;nav&gt;</code> for the navigation bar and <code>&lt;footer&gt;</code> for the bottom section to improve Accessibility (Screen Readers) and SEO.</li>
+        <li><strong>Hero Sections:</strong> Each of these pages features a "Hero" header (e.g. <code>&lt;div class="hero"&gt;</code>). This uses CSS Flexbox (<code>display: flex; flex-direction: column; justify-content: center;</code>) to perfectly center the text vertically and horizontally, regardless of screen size.</li>
+    </ul>
+
+    <h2>3. Advanced Page: Gallery (gallery.html)</h2>
+    <p>The Gallery uses an advanced "Masonry" layout so vertical and horizontal images fit together without gaps.</p>
+    <div class="box">
+        <strong>How it works (CSS Columns):</strong> Instead of a standard grid, we use <code>column-count: 2;</code> on the <code>.bento-gallery</code> wrapper. This acts exactly like newspaper text columns—images flow down the first column, then start at the top of the second. This prevents irregular gaps between photos of different heights.
+    </div>
+
+    <h2>4. Advanced Page: Impact (impact.html)</h2>
+    <p>This is the most technically complex page, featuring modern layouts and scroll animations.</p>
+    <ul>
+        <li><strong>Bento Grid Layout:</strong> The statistics boxes use CSS Grid. The magic code is <code>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</code>. This tells the browser to automatically create as many columns as will fit, but never let them shrink below 300px. This makes it 100% responsive without writing a single <code>@media</code> query!</li>
+        <li><strong>Grid Spanning:</strong> One stat box has the class <code>.wide</code> with <code>grid-column: 1 / -1;</code>. This forces that specific box to break the grid rules and stretch fully across the screen.</li>
+        <li><strong>Scroll Animations (Vanilla JS):</strong> When you scroll down, the boxes slide up. This is powered by <code>js/impact.js</code> using the <strong>Intersection Observer API</strong>. It watches elements with the <code>.fade-in</code> class. When they enter the screen, it adds a <code>.visible</code> class, triggering a CSS transition (<code>transform: translateY(0)</code>). It's incredibly lightweight and doesn't require jQuery or heavy animation libraries.</li>
+    </ul>
+
+    <h2>5. Quick Q&A (For Random Technical Questions)</h2>
+    
+    <div class="qa">
+        <div class="q">Q: What framework did you use to build this?</div>
+        <div class="a">A: We built it entirely "Vanilla" (HTML, CSS, JS) using Bootstrap 5 just for the basic layout grid. This keeps the site extremely fast, lightweight, and easy to host statically on GitHub Pages without a build step.</div>
+    </div>
+
+    <div class="qa">
+        <div class="q">Q: How do you handle Mobile Responsiveness?</div>
+        <div class="a">A: A combination of three things: Bootstrap grid classes (like <code>col-md-6</code>), CSS Flexbox for components like the Navbar, and CSS Grid (<code>auto-fit</code>) for our advanced Bento grids which adapt to screen size automatically. For extreme cases, we use <code>@media</code> queries (e.g. dropping Gallery columns from 2 to 1 on mobile).</div>
+    </div>
+
+    <div class="qa">
+        <div class="q">Q: Why did you use variables in CSS?</div>
+        <div class="a">A: Maintainability. By storing our hex colors and fonts in <code>:root</code> variables, we guarantee visual consistency across all 6 pages. If we ever rebrand, we only have to change the color code in one single line of code instead of 50.</div>
+    </div>
+
+    <div class="qa">
+        <div class="q">Q: How did you implement the scroll animations without hurting performance?</div>
+        <div class="a">A: By using the native Intersection Observer API in JavaScript. Older sites use scroll-event listeners which fire hundreds of times a second and cause lag. Intersection Observer delegates the math to the browser's engine, making the slide-up animations silky smooth.</div>
+    </div>
+
+</body>
+</html>

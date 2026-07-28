@@ -5,431 +5,488 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us — Mindwell</title>
-
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link href="css/variable.css" rel="stylesheet">
-    <link href="css/contact.css" rel="stylesheet">
 
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
 </head>
 
+<body data-bs-theme="light">
+    <!-- star from here -->
 
-<body>
+    <header class="heroo">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid header">
+
+                <a class="navbar-brand" href="home.html">
+                    <h1>MindWell</h1>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
 
 
-<header class="heroo">
+                <div class="collapse navbar-collapse" id="navbarMenu">
 
-    <div class="header">
+                    <div class="navbar-nav ms-auto header-1">
 
-        <h1>Mindwell</h1>
+                        <a class="nav-link link" href="home.html">
+                            <h3>Home</h3>
+                        </a>
 
-        <nav class="header-1">
+                        <a class="nav-link link" href="about.html">
+                            <h3>About</h3>
+                        </a>
 
-            <a href="home.html" class="link">Home</a>
-            <a href="about.html" class="link">About</a>
-            <a href="mission.html" class="link">Mission</a>
-            <a href="gallery.html" class="link">Gallery</a>
-            <a href="contact.html" class="link active" aria-current="page">
-                Contact us
-            </a>
+                        <a class="nav-link link" href="mission.html">
+                            <h3>Mission</h3>
+                        </a>
+
+                        <a class="nav-link link" href="impact.html">
+                            <h3>Impact</h3>
+                        </a>
+
+                        <a class="nav-link link" href="gallery.html">
+                            <h3>Gallery</h3>
+                        </a>
+
+                        <a class="nav-link link" href="contact.html">
+                            <h3>Contact</h3>
+                        </a>
+
+
+                        <button id="themeToggle" class="btn btn-outline-light ms-3">
+                            <i class="ph ph-moon"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
 
         </nav>
 
-    </div>
+    </header>
 
-</header>
-
-
-
-<div class="contact-split">
+    <main class="contact-main">
+        <section class="contact-split">
 
 
-    <div class="contact-photo left"></div>
+            <div class="contact-photo left"></div>
 
 
 
-    <div class="contact-card">
-
-
-        <span class="eyebrow">Get in touch</span>
-
-        <h1>Reach out</h1>
-
-        <p class="subline">
-            Connect with our team — every message is kept confidential.
-        </p>
+            <div class="contact-card">
 
 
 
 
-        <form
-            action="https://formsubmit.co/ngugijacinta07@gmail.com"
-            method="POST"
-            class="underline-form">
-
-
-            <fieldset>
-
-                <legend>Contact Information</legend>
+                <h1>
+                    Reach out
+                </h1>
 
 
 
-                <!-- FULL NAME -->
+                <p class="subline">
 
-                <div class="form-group full">
+                    Connect with our team - every message is kept confidential.
 
-                    <label for="fullname">
-                        Full Name <span class="req">*</span>
-                    </label>
+                </p>
 
-                    <input
-                        type="text"
-                        id="fullname"
-                        name="fullname"
-                        required
-                        minlength="2"
-                        placeholder="Jane Doe"
-                        autocomplete="name">
+
+
+
+
+                <form action="https://formsubmit.co/ngugijacinta07@gmail.com" method="POST" class="underline-form">
+
+
+
+                    <fieldset>
+
+
+                        <legend>
+                            Contact Information
+                        </legend>
+
+
+
+
+                        <!-- FULL NAME -->
+
+                        <div class="form-group full">
+
+
+                            <label for="fullname">
+
+                                Full Name <span class="req">*</span>
+
+                            </label>
+
+
+
+                            <input type="text" id="fullname" name="fullname" required minlength="2"
+                                placeholder="Jane Doe" autocomplete="name">
+
+
+                        </div>
+
+
+
+
+
+
+                        <!-- EMAIL -->
+
+
+                        <div class="form-group">
+
+
+                            <label for="email">
+
+                                Email <span class="req">*</span>
+
+                            </label>
+
+
+
+                            <input type="email" id="email" name="email" required placeholder="jane@email.com"
+                                autocomplete="email">
+
+
+
+                            <span class="hint">
+                                Example: jane@email.com
+                            </span>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <!-- PHONE -->
+
+
+                        <div class="form-group">
+
+
+                            <label for="phone">
+
+                                Phone <span class="req">*</span>
+
+                            </label>
+
+
+
+                            <input type="tel" id="phone" name="phone" required inputmode="tel" pattern="^\+[0-9]{3,15}$"
+                                title="Enter a valid international number starting with +" placeholder="+23012345678"
+                                autocomplete="tel">
+
+
+
+                            <span class="hint">
+
+                                Example: +23012345678
+
+                            </span>
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <!-- MESSAGE -->
+
+
+                        <div class="form-group full">
+
+
+                            <label for="message">
+
+                                Message <span class="req">*</span>
+
+                            </label>
+
+
+
+
+                            <textarea id="message" name="message" rows="4" required minlength="10"
+                                placeholder="Tell us a little about what brings you here..."></textarea>
+
+
+
+                        </div>
+
+
+
+                    </fieldset>
+
+
+
+
+
+                    <!-- FORMSUBMIT SETTINGS -->
+
+
+                    <input type="hidden" name="_captcha" value="false">
+
+
+
+                    <input type="hidden" name="_subject" value="New Mindwell Contact Form Submission">
+
+
+
+                    <input type="hidden" name="_template" value="table">
+
+
+
+                    <input type="hidden" name="_next" value="thankyou.html">
+
+
+
+
+
+                    <button type="submit" class="contact">
+
+                        Submit
+
+                    </button>
+
+
+
+                </form>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="contact-photo right"></div>
+
+
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- Brand -->
+
+                <div class="col-md-4">
+
+                    <h3 class="fw-bold">MindWell</h3>
+
+                    <p>
+                        Supporting People In Developing Emotional Resilience and Strength
+                    </p>
+
+                </div>
+
+
+
+                <!-- Links -->
+
+                <div class="col-md-4">
+
+                    <h3 class="fw-bold">
+                        Quick Links
+                    </h3>
+
+                    <div class="d-flex flex-column gap-2">
+
+                        <a href="home.html" class="footer-link">
+                            Home
+                        </a>
+
+                        <a href="about.html" class="footer-link">
+                            About
+                        </a>
+
+                        <a href="mission.html" class="footer-link">
+                            Mission
+                        </a>
+
+                        <a href="contact.html" class="footer-link">
+                            Contact Us
+                        </a>
+
+                    </div>
 
                 </div>
 
 
 
 
+                <!-- Contact -->
 
-                <!-- EMAIL -->
+                <div class="col-md-4">
 
-                <div class="form-group">
-
-                    <label for="email">
-                        Email <span class="req">*</span>
-                    </label>
-
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        placeholder="jane@email.com"
-                        autocomplete="email">
+                    <h3 class="fw-bold">
+                        Get in Touch
+                    </h3>
 
 
-                    <span class="hint">
-                        Example: jane@email.com
-                    </span>
-
-                </div>
+                    <div class="d-flex flex-column gap-3">
 
 
+                        <div class="d-flex align-items-center gap-2">
+
+                            <i class="ph ph-envelope-open"></i>
+
+                            <p class="mb-0">hello@mindwell.com</p>
+
+                        </div>
 
 
+                        <div class="d-flex align-items-center gap-2">
+
+                            <i class="ph ph-facebook-logo"></i>
+
+                            <p class="mb-0">hello@mindwell.com</p>
+
+                        </div>
 
 
-                <!-- INTERNATIONAL PHONE -->
+                        <div class="d-flex align-items-center gap-2">
 
-                <div class="form-group">
+                            <i class="ph ph-instagram-logo"></i>
 
+                            <p class="mb-0">hello@mindwell.com</p>
 
-                    <label for="phone">
-                        Phone <span class="req">*</span>
-                    </label>
-
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        inputmode="tel"
-                        pattern="^\+[0-9]{3,15}$"
-                        title="Enter a valid international number starting with +"
-                        placeholder="+23012345678"
-                        autocomplete="tel">
+                        </div>
 
 
-                    <span class="hint">
-                        Example: +23012345678
-                    </span>
+                        <div class="d-flex align-items-center gap-2">
 
+                            <i class="ph ph-whatsapp-logo"></i>
+
+                            <p class="mb-0">+230 000 0000</p>
+
+                        </div>
+
+
+                    </div>
 
                 </div>
 
 
+            </div>
 
 
 
+            <div class="footer-bottom">
 
+                <p>
+                    &copy; 2026 MindWell. All rights reserved.
+                </p>
 
-                <!-- REFERENCE TOKEN -->
-
-                <div class="form-group">
-
-
-                    <label for="reference">
-
-                        Reference Token
-                        <span class="req">*</span>
-
-                    </label>
-
-
-
-                    <input
-                        type="text"
-                        id="reference"
-                        name="reference"
-                        required
-                        pattern="^[A-Z]{3}-\d{4}$"
-                        title="Format must be ABC-1234"
-                        placeholder="ABC-1234">
-
-
-
-                    <span class="hint">
-                        Format: ABC-1234
-                    </span>
-
-
-
-                </div>
-
-
-
-
-
-
-
-                <!-- MESSAGE -->
-
-
-                <div class="form-group full">
-
-
-                    <label for="message">
-
-                        Message
-                        <span class="req">*</span>
-
-                    </label>
-
-
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                        required
-                        minlength="10"
-                        placeholder="Tell us a little about what brings you here...">
-                    </textarea>
-
-
-                </div>
-
-
-
-
-
-            </fieldset>
-
-
-
-
-
-            <!-- FORMSUBMIT SETTINGS -->
-
-            <input 
-                type="hidden" 
-                name="_captcha" 
-                value="false">
-
-
-            <input
-                type="hidden"
-                name="_subject"
-                value="New Mindwell Contact Form Submission">
-
-
-            <input
-                type="hidden"
-                name="_template"
-                value="table">
-
-
-            <input
-                type="hidden"
-                name="_next"
-                value="thankyou.html">
-
-
-
-
-
-
-            <button type="submit" class="contact">
-                Submit
-            </button>
-
-
-
-        </form>
-
-
-
-    </div>
-
-
-
-
-    <div class="contact-photo right"></div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<footer class="site-footer">
-
-
-    <div class="footer-content">
-
-
-        <div class="footer-brand">
-
-
-            <h2>Mindwell</h2>
-
-
-            <p>
-                Empowering care, one conversation at a time.
-            </p>
+            </div>
 
 
         </div>
 
-
-
-
-
-        <div class="footer-links">
-
-
-            <h4>Quick Links</h4>
-
-
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="mission.html">Mission and Impact</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact Us</a>
-
-
-        </div>
+    </footer>
 
 
 
 
 
 
-        <div class="footer-contact">
 
 
-            <h4>Get in Touch</h4>
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
+    <!-- Theme Toggle -->
 
-            <div>
-                <i class="ph ph-envelope-open"></i>
-                <a href="mailto:ngugijacinta@gmail.com">
-                    ngugijacinta@gmail.com
-                </a>
-            </div>
+    <script>
+        const toggle = document.getElementById("themeToggle");
 
+        toggle.addEventListener("click", () => {
 
+            const body = document.body;
+            const icon = toggle.querySelector("i");
 
-
-            <div>
-
-                <i class="ph ph-facebook-logo"></i>
-
-                <a href="#">
-                    Facebook
-                </a>
-
-            </div>
+            const theme = body.getAttribute("data-bs-theme");
 
 
+            if (theme === "light") {
+
+                body.setAttribute("data-bs-theme", "dark");
+
+                icon.className = "ph ph-sun";
 
 
+            } else {
 
-            <div>
+                body.setAttribute("data-bs-theme", "light");
 
-                <i class="ph ph-instagram-logo"></i>
+                icon.className = "ph ph-moon";
 
-                <a href="#">
-                    Instagram
-                </a>
+            }
 
-            </div>
-
+        });
 
 
+        // Personalized welcome message, following Web Storage API pattern.
+
+        let myButton = document.querySelector(".change-user-btn");
+        let myHeading = document.querySelector(".hero-title");
+
+        function setUserName() {
+            const myName = prompt("Please enter your name.");
+
+            // If user clicks Cancel (null) or leaves it empty, do nothing
+            if (!myName || myName.trim() === "") {
+                return;
+            }
+
+            localStorage.setItem("name", myName);
+            myHeading.textContent = `Welcome to Mindwell, ${myName}`;
+        }
+
+        if (!localStorage.getItem("name")) {
+            setUserName();
+        } else {
+            const storedName = localStorage.getItem("name");
+            myHeading.textContent = `Welcome to Mindwell, ${storedName}`;
+        }
+
+        myButton.addEventListener("click", () => {
+            setUserName();
+        });
+
+    </script>
 
 
-            <div>
-
-                <i class="ph ph-whatsapp-logo"></i>
-
-                <a href="https://wa.me/2300000000">
-                    +230 000 0000
-                </a>
-
-            </div>
-
-
-
-        </div>
-
-
-    </div>
-
-
-
-
-
-    <div class="footer-bottom">
-
-
-        <p>
-            &copy; 2026 Mindwell. All rights reserved.
-        </p>
-
-
-    </div>
-
-
-</footer>
-
-
+    <!-- to here, this is what my teamment should have as their footer -->
 
 </body>
 

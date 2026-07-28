@@ -1,9 +1,3 @@
-/* =====================================================
-   RESET
-   Removes browser default spacing and creates
-   predictable sizing behavior.
-===================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -331,8 +325,12 @@ p {
 
 .hero-content h1 {
     color: var(--color-primary);
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.05;
     margin-bottom: 25px;
 }
+
 
 .hero-content p {
     color: var(--color-primary);
@@ -469,7 +467,13 @@ p {
 
     transition: transform 0.3s ease;
 
+    background-color: var(--color-text-light);
 
+}
+
+.mission-card h3,
+.mission-card p {
+    color: var(--color-primary);
 }
 
 
@@ -705,7 +709,7 @@ p {
 .team-card {
 
 
-    background-color: var(--bs-card-bg);
+    background-color: var(--color-text-light);
 
     padding:30px 20px;
 
@@ -724,6 +728,9 @@ p {
 
 }
 
+.team-card h3 {
+    color: var(--color-primary);
+}
 
 
 
@@ -810,10 +817,9 @@ p {
 
 .site-footer i {
 
-    color: var(--color-accent);
+    color: var(--color-text-light);
 
-} /* <-- this closing brace was missing, which broke
-        every single footer rule written after it */
+}
 
 
 .footer-content {
@@ -876,4 +882,75 @@ p {
   color: var(--color-text-light);
   font-size: 14px;
   opacity: 0.7;
+}
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+
+    .values-container,
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .who-we-are .section-container {
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablets (portrait) and large phones */
+@media (max-width: 768px) {
+
+    .who-we-are .section-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-image img {
+        height: 300px;
+    }
+
+    .mission-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .navbar-brand {
+        font-size: 32px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 576px) {
+
+    .values-container,
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero {
+        padding: 40px 20px;
+    }
+
+    .mission-card,
+    .value-card,
+    .team-card {
+        padding: 30px 20px;
+    }
+
+    .header {
+        padding: 15px 20px;
+    }
 }
