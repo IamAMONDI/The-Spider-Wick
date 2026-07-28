@@ -41,12 +41,13 @@
     opacity: 0.8;
 }
 
-.header h1 {
-    color: var(--color-text-light);
-    transform: none;
-    font-size: var(--text-h1);
-    font-family: var(--font-main);
-    margin: 0;
+.header h1, .navbar-brand h1 {
+    color: var(--color-text-light) !important;
+    transform: none !important;
+    font-size: var(--text-h1) !important;
+    font-weight: 700 !important;
+    font-family: var(--font-main) !important;
+    margin: 0 !important;
 }
 
 .header-1{
