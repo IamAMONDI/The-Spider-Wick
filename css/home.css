@@ -55,11 +55,8 @@ h2{
 
 }
 
-h3 {
-  font-family: var(--font-main);
-  color: var(--color-text-light);
-  font-size: var(--text-h3);
-}
+
+
 
 h3:hover{
   color: var(--color-accent);
@@ -357,6 +354,11 @@ button {
   color: var(--color-text-light);
   transform: none;
   margin-bottom: 16px;
+}
+h3 {
+  font-family: var(--font-main);
+  color: var(--color-text-light);
+  font-size: var(--text-h3);
 }
 
 .footer-brand h2 {
