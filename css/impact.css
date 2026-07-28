@@ -15,16 +15,17 @@ body {
 
 /* ---- Impact Main Content ---- */
 .impact-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px 100px 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Hero Section */
 .impact-hero {
     text-align: center;
     padding: 100px 20px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+    background-color: var(--bs-card-bg);
 }
 
 .hero-title {
@@ -46,7 +47,9 @@ body {
 
 /* Stats Bento Grid */
 .impact-stats {
-    margin-bottom: 120px;
+    margin-bottom: 0;
+    padding: 100px 20px;
+    background-color: var(--color-text-light);
 }
 
 .bento-grid {
@@ -98,10 +101,9 @@ body {
 .impact-testimonial {
     padding: 120px 20px;
     text-align: center;
-    margin-bottom: 80px;
-    background-color: var(--color-primary); /* Dark green background */
-    color: var(--color-text-light); /* Light text */
-    border-radius: 32px;
+    margin-bottom: 0;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
 }
 
 .testimonial-content {
@@ -126,7 +128,9 @@ body {
 
 /* Visual Gallery Section */
 .impact-visuals {
-    margin-bottom: 120px;
+    margin-bottom: 0;
+    padding: 100px 20px;
+    background-color: var(--bs-card-bg);
 }
 
 .visual-gallery {
@@ -156,8 +160,9 @@ body {
 /* Call to Action */
 .impact-cta {
     text-align: center;
-    padding: 80px 20px;
-    margin-bottom: 40px;
+    padding: 100px 20px;
+    margin-bottom: 0;
+    background-color: var(--color-text-light);
 }
 
 .impact-cta h2 {
@@ -218,8 +223,12 @@ body {
     }
 
     .impact-testimonial {
-        padding: 60px 20px;
-    }
+    padding: 120px 20px;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
     
     .impact-testimonial blockquote {
         font-size: 32px;
@@ -255,4 +264,12 @@ body {
 .fade-in.visible {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+
+/* Constrain inner content of full-width sections */
+.impact-main > section > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
