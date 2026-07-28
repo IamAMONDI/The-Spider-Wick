@@ -472,13 +472,9 @@ body {
 
 .bento-gallery {
 
-    display: grid;
+    column-count: 3;
 
-    grid-template-columns: repeat(3, 1fr);
-
-    grid-auto-rows: 250px;
-
-    gap: 25px;
+    column-gap: 25px;
 
 }
 
@@ -500,6 +496,10 @@ body {
     background: black;
 
     animation: fadeUp 1s ease;
+    
+    break-inside: avoid;
+    
+    margin-bottom: 25px;
 
 }
 
@@ -509,7 +509,7 @@ body {
 
 .gallery-box.box-large {
 
-    grid-column: span 2;
+    /* Ignored in CSS columns, but keeping class for semantic purpose */
 
 }
 
@@ -651,6 +651,12 @@ body {
 
 
 
+@media(max-width: 1024px) {
+    .bento-gallery {
+        column-count: 2;
+    }
+}
+
 /* Mobile */
 
 
@@ -670,17 +676,14 @@ body {
 
     .bento-gallery {
 
-        grid-template-columns: 1fr;
-
-        grid-auto-rows: 300px;
+        column-count: 1;
 
     }
 
     .gallery-box.box-large {
 
-        grid-column: auto;
+        /* Ignored in CSS columns */
 
     }
-
 
 }
