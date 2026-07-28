@@ -3,6 +3,42 @@
    Requires variable.css to be loaded first.
    Built entirely with vanilla CSS (Flexbox, Grid, Media Queries)
    ========================================================== */
+[data-bs-theme="light"] {
+
+    --bs-body-bg: beige;
+    --bs-body-color: var(--color-primary);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45, 90, 74;
+
+    --bs-link-color: var(--color-primary);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-primary);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg: white;
+
+}
+
+
+[data-bs-theme="dark"] {
+
+    --bs-body-bg: #121212;
+    --bs-body-color: var(--color-text-light);
+
+    --bs-primary: var(--color-primary);
+    --bs-primary-rgb: 45,90,74;
+
+    --bs-link-color: var(--color-text-light);
+    --bs-link-hover-color: var(--color-accent);
+
+    --bs-navbar-color: var(--color-text-light);
+    --bs-navbar-hover-color: var(--color-accent);
+
+    --bs-card-bg:#1e1e1e;
+
+}
 
 /* Base Reset & Body */
 body {
