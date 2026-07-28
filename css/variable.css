@@ -37,6 +37,21 @@
     font-family: var(--font-main);
 }
 
+.navbar .navbar-nav .nav-link.link {
+    color: var(--color-text-light) !important;
+    padding: 0;
+}
+
+.navbar .navbar-nav .nav-link.link:hover,
+.navbar .navbar-nav .nav-link.link:hover h3 {
+    color: var(--color-accent) !important;
+}
+
+.navbar .navbar-nav .nav-link.link h3 {
+    color: inherit !important;
+    margin: 0;
+}
+
 .link:hover {
     opacity: 0.8;
 }
