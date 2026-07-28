@@ -105,7 +105,7 @@
 .site-footer {
     background-color: var(--color-primary);
     color: var(--color-text-light);
-    padding: 60px 0 20px;
+    padding: 60px 96px 20px;
 }
 
 .site-footer p,
@@ -120,16 +120,30 @@
 }
 
 .footer-content {
-    width: min(1200px, 90%);
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-brand h2,
+.footer-links h4,
+.footer-contact h4 {
+    font-family: var(--font-main);
+    color: var(--color-text-light);
+    transform: none;
+    margin-bottom: 16px;
 }
 
 .footer-brand h2 {
-    margin-bottom: 16px;
+    font-size: 28px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 18px;
 }
 
 .footer-brand p,

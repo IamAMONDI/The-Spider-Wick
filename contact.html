@@ -105,7 +105,7 @@
 
 
 
-                <form action="https://formsubmit.co/ngugijacinta07@gmail.com" method="POST" class="underline-form">
+                <form action="https://formsubmit.co/ngugijacinta07@gmail.com" method="POST" class="underline-form" id="contactForm">
 
 
 
@@ -429,60 +429,54 @@
     <script>
         const toggle = document.getElementById("themeToggle");
 
-        toggle.addEventListener("click", () => {
+        if (toggle) {
+            toggle.addEventListener("click", () => {
+                const body = document.body;
+                const icon = toggle.querySelector("i");
+                const theme = body.getAttribute("data-bs-theme");
 
-            const body = document.body;
-            const icon = toggle.querySelector("i");
-
-            const theme = body.getAttribute("data-bs-theme");
-
-
-            if (theme === "light") {
-
-                body.setAttribute("data-bs-theme", "dark");
-
-                icon.className = "ph ph-sun";
-
-
-            } else {
-
-                body.setAttribute("data-bs-theme", "light");
-
-                icon.className = "ph ph-moon";
-
-            }
-
-        });
-
-
-        // Personalized welcome message, following Web Storage API pattern.
-
-        let myButton = document.querySelector(".change-user-btn");
-        let myHeading = document.querySelector(".hero-title");
-
-        function setUserName() {
-            const myName = prompt("Please enter your name.");
-
-            // If user clicks Cancel (null) or leaves it empty, do nothing
-            if (!myName || myName.trim() === "") {
-                return;
-            }
-
-            localStorage.setItem("name", myName);
-            myHeading.textContent = `Welcome to Mindwell, ${myName}`;
+                if (theme === "light") {
+                    body.setAttribute("data-bs-theme", "dark");
+                    icon.className = "ph ph-sun";
+                } else {
+                    body.setAttribute("data-bs-theme", "light");
+                    icon.className = "ph ph-moon";
+                }
+            });
         }
 
-        if (!localStorage.getItem("name")) {
-            setUserName();
-        } else {
-            const storedName = localStorage.getItem("name");
-            myHeading.textContent = `Welcome to Mindwell, ${storedName}`;
+        const contactForm = document.getElementById("contactForm");
+        const submitButton = contactForm?.querySelector("button[type='submit']");
+
+        if (contactForm && submitButton) {
+            const statusMessage = document.createElement("p");
+            statusMessage.className = "form-status";
+            statusMessage.setAttribute("aria-live", "polite");
+            contactForm.appendChild(statusMessage);
+
+            contactForm.addEventListener("submit", function (event) {
+                const requiredFields = contactForm.querySelectorAll("input[required], textarea[required]");
+                let isValid = true;
+
+                requiredFields.forEach((field) => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    event.preventDefault();
+                    statusMessage.textContent = "Please complete all required fields before sending.";
+                    statusMessage.style.color = "#b42318";
+                    return;
+                }
+
+                submitButton.disabled = true;
+                submitButton.textContent = "Sending...";
+                statusMessage.textContent = "Sending your message...";
+                statusMessage.style.color = "#2D5A4A";
+            });
         }
-
-        myButton.addEventListener("click", () => {
-            setUserName();
-        });
-
     </script>
 
 
