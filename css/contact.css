@@ -330,8 +330,13 @@ button.contact:hover {
 
 }
 
-
-
+.form-status {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    font-family: var(--font-main);
+    font-size: 15px;
+    color: var(--color-primary);
+}
 
 
 /* ================= FOOTER ================= */
@@ -381,22 +386,22 @@ button.contact:hover {
     font-family:var(--font-main);
 
     color:var(--color-text-light);
-
+    transform: none;
     margin-bottom:16px;
-
 
 }
 
 
 
-.footer-brand p {
-
+.footer-brand p,
+.footer-contact p {
 
     color:var(--color-text-light);
 
     opacity:.85;
 
     font-family:var(--font-main);
+    font-size:16px;
 
 }
 
