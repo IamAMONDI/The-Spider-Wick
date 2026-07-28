@@ -265,7 +265,7 @@
 <script>
     const toggle = document.getElementById("themeToggle");
 
-toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", () => {
 
     const body = document.body;
     const icon = toggle.querySelector("i");
@@ -315,9 +315,7 @@ if (!localStorage.getItem("name")) {
   myHeading.textContent = `Welcome to Mindwell, ${storedName}`;
 }
 
-myButton.addEventListener("click", () => {
-  setUserName();
-});
+myButton.addEventListener("click", setUserName);
 
 </script>
 
