@@ -82,3 +82,16 @@
 .link:hover h3 {
     color: var(--color-accent);
 }
+
+/* =========================
+   HERO TITLE STYLES
+========================= */
+.hero-title {
+    font-size: 70px !important;
+    font-weight: 700 !important;
+    font-family: var(--font-main) !important;
+    color: var(--color-primary) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 20px !important;
+    letter-spacing: -0.02em !important;
+}
