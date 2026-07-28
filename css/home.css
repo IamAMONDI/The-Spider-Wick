@@ -208,7 +208,7 @@ button {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 784px) {
     .middle-section {
         padding: 24px;
     }
@@ -231,9 +231,14 @@ button {
     }
 
     .story-image {
-        max-width: 100%;
+        max-width: 80%;
         border-radius: 20px;
     }
+
+    .hero-title{
+      font-size: 35px;
+    }
+
 }
 /* ---- "Specialized Focus" section ---- */
 
@@ -286,6 +291,25 @@ button {
   line-height: 1.5;
   color: var(--color-primary);
   margin: 0;
+}
+
+@media(max-width: 784px) {
+  .focus-grid {
+    display: flex ;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.focus-card {
+    padding: 24px;
+    height: auto;
+    flex: 1 1 100%;
+    flex-wrap: nowrap;
+}
+
+    
+
 }
 
 .contact {
