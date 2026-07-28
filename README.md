@@ -76,7 +76,7 @@ git clone <repo-url>
 - Follow the shared `variables.css` design tokens for consistent styling
 - Open a pull request for review before merging into `main`
 
-## Status
+## QR Code
 
-In progress — actively being built as part of the TechCrush program.
-![alt text](website_qr.png)
+![MindWell screenshot](assets\image.png)
+
