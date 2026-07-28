@@ -79,3 +79,4 @@ git clone <repo-url>
 ## Status
 
 In progress — actively being built as part of the TechCrush program.
+![alt text](website_qr.png)
