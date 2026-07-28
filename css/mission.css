@@ -25,6 +25,9 @@
 
 
 
+
+
+
 * {
 
   box-sizing:border-box;
@@ -155,12 +158,7 @@ body {
 
 /* =========================
    MISSION SECTION 
-========================= */
-
-
-
-
-
+========================= */  
 
 
 
@@ -174,7 +172,7 @@ body {
 
 .mission-box {
     background:red;
-    width: 500px;
+    width: 1000px;
     height: 500px;
     position: relative;
     display: flex;
@@ -224,12 +222,47 @@ body {
 
 
 
+.mission-hero {
+    background-color: transparent; /* or remove the background-color line entirely */
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.mission-hero-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mission-hero h1 {
+    color: var(--color-primary);   /* was var(--color-text-light) */
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: clamp(40px, 6vw, 64px);
+    margin: 0;
+}
+
+.mission-divider {
+    width: 100%;
+    max-width: 400px;
+    height: 2px;
+    background-color: var(--color-primary);  /* was var(--color-text-light) */
+    opacity: 0.4;
+    margin: 20px auto;
+}
+
+.mission-tagline {
+    color: var(--color-primary);   /* was var(--color-text-light) */
+    font-size: 20px;
+    opacity: 0.85;
+    margin: 0;
+}
+
 
 /* =========================
    MISSION GRID
 ========================= */
 
-.mission-section {
+.mission- {
     padding: 60px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -244,6 +277,11 @@ body {
     grid-column: 1 / -1;
     justify-self: center;
 }
+
+
+
+
+
 
 
 
@@ -597,36 +635,3 @@ body {
 
 
 
-/* Mobile */
-
-
-@media(max-width: 768px) {
-
-    .mission-section {
-
-        padding: 60px 0;
-
-    }
-
-    .mission-heading h1 {
-
-        font-size: 45px;
-
-    }
-
-    .bento-mission {
-
-        grid-template-columns: 1fr;
-
-        grid-auto-rows: 300px;
-
-    }
-
-    .mission-box.box-large {
-
-        grid-column: auto;
-
-    }
-
-
-}
